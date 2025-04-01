@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebRTC File Transfer</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="room-controls">
+        <button onclick="createPublicRoom()">创建公开房间</button>
+        <div>
+            <input type="text" id="room-id" placeholder="输入房间号">
+            <button onclick="createPrivateRoom()">创建私有房间</button>
+            <button onclick="joinRoom()">加入房间</button>
+        </div>
+        <button onclick="getPublicRooms()">查看公开房间</button>
+        <div id="public-rooms"></div>
+    </div>
+
+    <div id="file-transfer" style="display:none;">
+        <div id="room-info"></div>
+        <div id="user-list">
+            <h3>房间成员</h3>
+            <ul id="users"></ul>
+        </div>
+        <div id="transfer-area">
+            <input type="file" id="fileInput" multiple>
+            <div>选择要发送给的用户：<select id="target-user"></select></div>
+            <div id="file-list"></div>
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
